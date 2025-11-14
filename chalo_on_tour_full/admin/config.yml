@@ -1,0 +1,25 @@
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img"
+
+collections:
+  - name: "packages"
+    label: "Packages"
+    folder: "content/packages"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Days", name: "days", widget: "number" }
+      - { label: "Nights", name: "nights", widget: "number" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "WhatsApp Number", name: "whatsapp", widget: "string", required: false }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

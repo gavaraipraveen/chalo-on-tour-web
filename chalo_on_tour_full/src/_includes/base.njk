@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title | default("Chalo On Tour") }}</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="logo"><a href="/">{{ site.title }}</a></div>
+    <div>
+      <a href="/">Home</a>
+      <a href="/packages/">Packages</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  {% block content %}{% endblock %}
+
+  <footer class="footer">
+    © {{ site.title }} | Designed with ❤️
+  </footer>
+
+  <div class="contact-fixed">
+    <a class="wa" href="https://wa.me/919999999999" title="WhatsApp" target="_blank">W</a>
+    <a class="contact-phone" href="tel:+919999999999" title="Call">P</a>
+    <a class="contact-email" href="mailto:info@example.com" title="Email">E</a>
+  </div>
+</body>
+</html>
