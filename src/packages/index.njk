@@ -1,0 +1,29 @@
+---
+title: Packages
+pagination:
+  data: collections.packages
+  size: 10
+  alias: packages
+permalink: /packages/
+---
+{% extends "base.njk" %}
+{% block content %}
+<section class="container">
+  <h2>Holiday Packages</h2>
+  <div class="cards">
+    {% for p in packages %}
+    <article class="card">
+      <img src="{{ p.data.image | url }}" alt="{{ p.data.title }}">
+      <div class="body">
+        <h3>{{ p.data.title }}</h3>
+        <p>{{ p.data.description | safe | truncate(140) }}</p>
+        <div class="actions">
+          <a class="btn" href="{{ p.url }}">Details</a>
+          <a class="btn" href="https://wa.me/{{ p.data.whatsapp }}" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

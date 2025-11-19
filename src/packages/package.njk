@@ -1,0 +1,26 @@
+---
+pagination:
+  data: collections.packages
+  size: 1
+  alias: package
+permalink: "/packages/{{ package.data.slug }}/"
+---
+{% extends "base.njk" %}
+{% block content %}
+<section class="container">
+  <article class="card">
+    <img src="{{ package.data.image | url }}" alt="{{ package.data.title }}">
+    <div class="body">
+      <h2>{{ package.data.title }}</h2>
+      <p><strong>Price:</strong> {{ package.data.price }}</p>
+      <p><strong>Duration:</strong> {{ package.data.days }}D / {{ package.data.nights }}N</p>
+      <div>{{ package.templateContent | safe }}</div>
+      <div class="actions" style="margin-top:1rem">
+        <a class="btn" href="https://wa.me/{{ package.data.whatsapp }}" target="_blank">WhatsApp Owner</a>
+        <a class="btn" href="mailto:info@chaloon tour.com">Email</a>
+        <a class="btn" href="tel:+919999999999">Call</a>
+      </div>
+    </div>
+  </article>
+</section>
+{% endblock %}

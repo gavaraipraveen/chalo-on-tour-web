@@ -1,0 +1,12 @@
+{
+  "name": "chalo-on-tour",
+  "version": "1.0.0",
+  "description": "Chalo On Tour - Travel website with Netlify CMS and Eleventy",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}
